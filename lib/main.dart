@@ -1,3 +1,4 @@
+import 'package:bookly/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
@@ -15,7 +16,11 @@ void main() {
    @override
    Widget build(BuildContext context) {
      return GetMaterialApp(
-       home: SplashView(),
+       debugShowCheckedModeBanner: false,
+       theme: ThemeData().copyWith(
+         scaffoldBackgroundColor:KPrimaryColor,
+       ),
+       home: const SplashView(),
      );
    }
  }
